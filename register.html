@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    
+<!-- MultiStep Form -->
+<div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+        <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2><strong>Book Your Flight Here</strong></h2>
+                <p>Fill all form fields to go to next step</p>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id=""><strong>Personal info</strong></li>
+                                <li><strong>Vaccination</strong></li>
+                                <li><strong>Bookings</strong></li>
+                                <li><strong>Finish</strong></li>
+                            </ul> <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Personal Information</h2> 
+                                    <div class="form-group mb-2">
+                                        
+                                        <input type="text" class="form-control" placeholder="First Name" id="firstname" name="firstname" required>
+                                        <small id="firstname_error" class="form-text text-muted"></small>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                
+                                        <input type="text" class="form-control" placeholder="Last Name" id="secondname" name="secondname">
+                                        <small id="secondname_error" class="form-text text-muted"></small>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        
+                                        <input type="number" class="form-control" placeholder="Enter your mobile number" id="mobile_number" name="mobile_number">
+                                        <small id="mobilenumber_error" class="form-text text-muted"></small>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        
+                                        <input type="number" class="form-control" placeholder="Enter your ID number" id="id_number" name="id_number">
+                                        <small id="id_number_error" class="form-text text-muted"></small>
+                                    </div>
+                                    
+                                </div> 
+                                <input type="button" name="next" class="next action-button" value="Next Step" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Vaccination</h2> 
+                                    <div class="form-group mb-2">
+                                        <label>Are You Vaccinated?</label>
+                                        <select name="vaccine" id="vaccine" class="form-control">
+                                            <option value="">Choose...</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                        <small id="vaccine_error" class="form-text text-muted"></small>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label>Which vaccine was used?</label>
+                                        <select name="vaccine_used" id="vaccine_used" class="form-control">
+                                            <option value="">Choose...</option>
+                                            <option value="Polio">Polio</option>
+                                            <option value="covid">COVID</option>
+                                        </select>
+                                        <small id="vaccine_used_error" class="form-text text-muted"></small>
+                                    </div>
+                                </div> 
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                <input type="button" name="next" class="next action-button" value="Next Step" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title">Bookings</h2>
+                                    <div class="input-group">
+                                        <label>Passport Photo</label>
+                                        <input type="file" class="form-control" id="passport_photo" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                        <small id="passport_photo_error" class="form-text text-muted"></small>
+                                      </div>
+                                    <div class="form-group mb-2">
+                                        <label>Destination</label>
+                                       <input type="text" name="destination" id="destination" placeholder="Your Destination">
+                                        <small id="destination_error" class="form-text text-muted"></small>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label>Airline</label>
+                                        <select name="airline" id="airline" class="form-control">
+                                            <option value="">Choose...</option>
+                                            <option value="Kenya Airways">Kenya Airways</option>
+                                            <option value="Emirates">Emirates</option>
+                                        </select>
+                                        <small id="airline_error" class="form-text text-muted"></small>
+                                    </div>
+                                </div> 
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                <input type="button" name="book" class="next action-button" value="Confirm" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                    </div> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5>Thank You For Booking With Us</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
